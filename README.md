@@ -84,6 +84,12 @@ Interface para adicionar, editar e excluir clientes.
 
 Programe mensagens para envio futuro com horário definido.
 
+
+
+https://github.com/user-attachments/assets/23c6e70f-d396-4999-92fa-4014609a4526
+
+
+
 ---
 
 ## 🧪 Testes e Melhorias
