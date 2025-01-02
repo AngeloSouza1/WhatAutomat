@@ -194,3 +194,23 @@ Time: 17:6
 Phone Number: +5512988557010
 Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
 --------------------
+Date: 2/1/2025
+Time: 18:29
+Phone Number: +5512988457047
+Message: ooooooooooooooo
+--------------------
+Date: 2/1/2025
+Time: 18:31
+Phone Number: +5512988457047
+Message: 333333333333
+--------------------
+Date: 2/1/2025
+Time: 18:32
+Phone Number: +5512988457047
+Message: 77777777777777777777
+--------------------
+Date: 2/1/2025
+Time: 18:33
+Phone Number: +5512988457047
+Message: 5555555555555555
+--------------------
