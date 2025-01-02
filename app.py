@@ -1,3 +1,4 @@
+from pyvirtualdisplay import Display
 from flask import Flask, render_template, redirect, url_for, request, flash
 from models import db, Client, ScheduledMessage
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -24,6 +25,10 @@ scheduler.start()
 # Cria as tabelas ao iniciar o aplicativo
 with app.app_context():
     db.create_all()
+
+# Inicializa o display virtual
+display = Display(visible=0, size=(1024, 768))
+display.start()
 
 # Rota principal
 @app.route('/')
@@ -192,8 +197,9 @@ def schedule_messages():
     return render_template('schedule_messages.html', clients=clients)
 
 
-
-
+# Finaliza o display virtual ao sair da aplicação
+import atexit
+atexit.register(display.stop)
 
 
 if __name__ == '__main__':
