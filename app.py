@@ -11,6 +11,7 @@ from services.message_service import send_message, send_bulk_messages
 from pyvirtualdisplay import Display
 import pyautogui
 
+
 # Configuração do Flask
 app = Flask(__name__)
 base_dir = os.path.abspath(os.path.dirname(__file__))
@@ -38,6 +39,7 @@ def dashboard():
     clients = Client.query.order_by(Client.name.asc()).all()
     # Obter mensagens agendadas em ordem decrescente
     messages = ScheduledMessage.query.order_by(ScheduledMessage.schedule_time.desc()).all()
+
     return render_template('dashboard.html', clients=clients, messages=messages)
 
 
@@ -85,9 +87,7 @@ def edit_client(client_id):
         if not name or not phone:
             flash("Todos os campos são obrigatórios!", "danger")
             return redirect(url_for('add_client'))
-, methods=['GET', 'POST'])
-def send_messages():
-    if r
+
         # Validação do telefone
         if not phone.startswith('+55') or len(phone) != 14 or not phone[1:].isdigit():
             flash("O telefone deve estar no formato internacional brasileiro (+55 seguido de 11 dígitos).", "danger")
