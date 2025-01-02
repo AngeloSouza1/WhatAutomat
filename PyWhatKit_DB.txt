@@ -1,0 +1,196 @@
+Date: 2/1/2025
+Time: 15:10
+Phone Number: +5512988457047
+Message: http://127.0.0.1:5000/
+--------------------
+
+Date: 2/1/2025
+Time: 15:12
+Phone Number: +5512988457047
+Message: Olá, tudo bem?Esta é uma mensagem de teste enviada automaticamente pelo sistema. Caso tenha recebido, por favor, ignore esta mensagem.Obrigado!
+--------------------
+Date: 2/1/2025
+Time: 15:17
+Phone Number: +5512988457047
+Message: teste
+--------------------
+Date: 2/1/2025
+Time: 15:18
+Phone Number: +5512988457047
+Message: testes
+--------------------
+Date: 2/1/2025
+Time: 15:19
+Phone Number: +5512988457047
+Message: 0000000000000000
+--------------------
+Date: 2/1/2025
+Time: 15:28
+Phone Number: +5512988457047
+Message: 1211111
+--------------------
+Date: 2/1/2025
+Time: 15:31
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:32
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:32
+Phone Number: +5512996007607
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:38
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:40
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:40
+Phone Number: +5512996007607
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:41
+Phone Number: +5512991387116
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:50
+Phone Number: +5512988557010
+Message: teste
+--------------------
+Date: 2/1/2025
+Time: 15:54
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:56
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 15:56
+Phone Number: +5512988557010
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem.Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 16:1
+Phone Number: +5512988557010
+Message: vvvv
+--------------------
+Date: 2/1/2025
+Time: 16:4
+Phone Number: +5512988457047
+Message: qqqqqqqqqqqq
+--------------------
+Date: 2/1/2025
+Time: 16:5
+Phone Number: +5512988557010
+Message: testse
+--------------------
+Date: 2/1/2025
+Time: 16:7
+Phone Number: +5512988557010
+Message: teste invalido
+--------------------
+Date: 2/1/2025
+Time: 16:13
+Phone Number: +5512988557010
+Message: mmmmmmmmmmmmmmmmmm
+--------------------
+Date: 2/1/2025
+Time: 16:22
+Phone Number: +5512988557010
+Message: çççççççççççççççççççç
+--------------------
+Date: 2/1/2025
+Time: 16:24
+Phone Number: +5512988557010
+Message: oooooooooooooooo
+--------------------
+Date: 2/1/2025
+Time: 16:25
+Phone Number: +5512988457047
+Message: 3333333333333333333333
+--------------------
+Date: 2/1/2025
+Time: 16:26
+Phone Number: +5512988457047
+Message: testando envio valido!
+--------------------
+Date: 2/1/2025
+Time: 16:28
+Phone Number: +5512988557010
+Message: testattdo mensagem invalido!!
+--------------------
+Date: 2/1/2025
+Time: 16:31
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 16:31
+Phone Number: +5512996007607
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 16:32
+Phone Number: +5512988557010
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 16:37
+Phone Number: +5512988557010
+Message: oooo
+--------------------
+Date: 2/1/2025
+Time: 16:41
+Phone Number: +5512988557010
+Message: ssssssssssssssssssss
+--------------------
+Date: 2/1/2025
+Time: 16:48
+Phone Number: +5512988557010
+Message: teses
+--------------------
+Date: 2/1/2025
+Time: 17:2
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 17:2
+Phone Number: +5512996007607
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 17:3
+Phone Number: +5512988557010
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 17:5
+Phone Number: +5512988457047
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 17:5
+Phone Number: +5512996007607
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------
+Date: 2/1/2025
+Time: 17:6
+Phone Number: +5512988557010
+Message: Olá! 😊 Esta é uma mensagem de teste enviada automaticamente pelo sistema de automação do WhatsApp. Por favor, desconsidere esta mensagem. Atenciosamente, Equipe de Automação.
+--------------------

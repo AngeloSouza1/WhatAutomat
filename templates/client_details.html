@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="my-4 text-center">Detalhes do Cliente</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h2>{{ client.name }}</h2>
+    </div>
+    <div class="card-body">
+        <p><strong>Telefone:</strong> {{ client.phone }}</p>
+        <p><strong>Mensagens Agendadas:</strong></p>
+        <ul>
+            {% for msg in client.messages %}
+                <li>
+                    "{{ msg.message }}" - <small class="text-muted">Agendado para: {{ msg.schedule_time }}</small>
+                </li>
+            {% else %}
+                <li class="text-muted">Nenhuma mensagem agendada.</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Voltar ao Dashboard</a>
+    </div>
+</div>
+{% endblock %}

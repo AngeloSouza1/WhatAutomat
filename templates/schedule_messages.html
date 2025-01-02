@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <div class="px-4 py-2 bg-success text-white rounded shadow-sm">
+        <h1 class="my-0 text-center">
+            <i class="bi bi-calendar-check-fill"></i> Agendar Mensagens
+        </h1>
+    </div>
+</div>
+<hr>
+<br>
+
+<div class="row">
+    <!-- Formulário Completo -->
+    <div class="col-md-12">
+        <form method="POST">
+            <div class="row">
+                <!-- Lista de Clientes -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h5><i class="bi bi-person-lines-fill"></i> Selecione os Clientes</h5>
+                        </div>
+                        <div class="card-body overflow-auto" style="max-height: 500px;">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th><span>✔️</span> Selecionar</th>
+                                        <th><span>👤</span> Nome</th>
+                                        <th><span>📞</span> Telefone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for client in clients %}
+                                        <tr class="client-row">
+                                            <td>
+                                                <input 
+                                                    class="form-check-input client-checkbox" 
+                                                    type="checkbox" 
+                                                    name="contacts" 
+                                                    value="{{ client.id }}" 
+                                                    id="client{{ client.id }}">
+                                            </td>
+                                            <td>{{ client.name }}</td>
+                                            <td>{{ client.phone }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inputs de Mensagem e Horário -->
+                <div class="col-md-8">
+                    <div class="card p-3">
+                        <!-- Campo de Mensagem -->
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea 
+                                class="form-control" 
+                                id="message" 
+                                name="message" 
+                                rows="14" 
+                                required
+                                placeholder="Escreva sua mensagem aqui..."></textarea>
+                            <!-- Botão de Texto Pronto -->
+                            <div class="mt-2">
+                                <button type="button" class="btn btn-outline-primary" id="predefinedMessageBtn">
+                                    <i class="bi bi-chat-dots"></i> Inserir Texto Pronto
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Campo de Horário -->
+                        <div class="mb-4">
+                            <label for="schedule_time" class="form-label">Horário de Agendamento</label>
+                            <input 
+                                type="datetime-local" 
+                                class="form-control" 
+                                id="schedule_time" 
+                                name="schedule_time" 
+                                required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-calendar-check-fill"></i> Agendar Mensagens
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Botão de texto pronto
+        const predefinedMessageBtn = document.getElementById("predefinedMessageBtn");
+        const messageInput = document.getElementById("message");
+
+        predefinedMessageBtn.addEventListener("click", () => {
+            const predefinedText = 
+                "🛒 *Pedido - Sta Clara* 🛒\n\n" +
+                "📌 *Prezados,*\n\n" +
+                "Gostaria de solicitar o pedido semanal dos seguintes produtos:\n\n" +
+                "───────────────────\n\n" +
+                "🍪 *Queijadinha*\n" +
+                "🍪 *Beliscão*\n" +
+                "🍪 *Pão de Mel*\n\n" +
+                "───────────────────\n\n" +
+                "📦 *Aguardo a confirmação das quantidades disponíveis.*\n\n" +
+                "🤝 *Atenciosamente*\n" ;
+                
+           
+            messageInput.value = predefinedText;
+        });
+
+        // Alteração de cor para clientes selecionados
+        const checkboxes = document.querySelectorAll(".client-checkbox");
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function () {
+                const row = this.closest(".client-row");
+                if (this.checked) {
+                    row.classList.add("table-primary", "text-white");
+                } else {
+                    row.classList.remove("table-primary", "text-white");
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

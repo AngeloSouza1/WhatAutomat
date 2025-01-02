@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <div class="px-4 py-2 bg-primary text-white rounded shadow-sm">
+        <h1 class="my-0 text-center">
+            <i class="bi bi-grid-fill"></i> Dashboard
+        </h1>
+    </div>
+</div>
+<hr>
+<br>
+
+<div class="row">
+    <!-- Sobre a Aplicação -->
+    <div class="col-md-4">
+        <div class="card h-100" style="max-height: 650px;">
+            <div class="card-header bg-info text-white text-center">
+                <h5>ℹ️ Sobre a Aplicação</h5>
+            </div>
+            <div class="card-body overflow-auto">
+                <p>
+                    Este sistema foi desenvolvido para automatizar o envio de mensagens pelo WhatsApp, oferecendo uma maneira prática e eficiente de gerenciar sua comunicação com clientes.
+                </p>
+                <p><strong>Principais funcionalidades:</strong></p>
+                <ul>
+                    <li>📇 <strong>Gerenciamento de Clientes:</strong> Cadastre, edite ou exclua contatos de forma simples.</li>
+                    <li>✉️ <strong>Envio de Mensagens:</strong> Envie mensagens individuais diretamente para seus clientes.</li>
+                    <li>⏳ <strong>Agendamento de Mensagens:</strong> Programe o envio de mensagens para horários específicos, garantindo que seus clientes recebam informações no momento certo.</li>
+                </ul>
+                <p><strong>Observação importante:</strong></p>
+                <p>
+                    Para que o sistema funcione corretamente, é essencial que você esteja conectado ao WhatsApp Web. O sistema utiliza o navegador para realizar o envio das mensagens. Certifique-se de que:
+                </p>
+                <ul>
+                    <li>Seu dispositivo esteja conectado à internet.</li>
+                    <li>O WhatsApp Web esteja configurado e logado no mesmo navegador utilizado pelo sistema.</li>
+                </ul>
+                <p>
+                    O recurso de <strong>agendamento</strong> é particularmente útil para manter uma comunicação consistente, como lembretes, atualizações de status e promoções.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de Clientes -->
+    <div class="col-md-4">
+        <div class="card h-100" style="max-height: 650px;">
+            <div class="card-header bg-primary text-white text-center">
+                <h5>👥 Clientes</h5>
+            </div>
+            <div class="card-body overflow-auto">
+                <div class="mb-3">
+                    <input 
+                        type="text" 
+                        id="searchClient" 
+                        class="form-control" 
+                        placeholder="Pesquisar por nome ou telefone..." 
+                        aria-label="Pesquisar Clientes">
+                </div>
+                <div style="max-height: 550px; overflow-y: auto;">
+                    <table class="table table-hover table-striped table-bordered" id="clientTable">
+                        <thead>
+                            <tr>
+                                <th>👤 Nome</th>
+                                <th>📞 Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for client in clients %}
+                                <tr>
+                                    <td class="client-name">{{ client.name }}</td>
+                                    <td class="client-phone">{{ client.phone }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="2" class="text-muted text-center">Nenhum cliente cadastrado.</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensagens Agendadas -->
+    <div class="col-md-4">
+        <div class="card h-100" style="max-height: 650px;">
+            <div class="card-header bg-success text-white text-center">
+                <h5>📆 Mensagens Agendadas</h5>
+            </div>
+            <div class="card-body overflow-auto">
+                <div style="max-height: 570px; overflow-y: auto;">
+                    <ul class="list-group">
+                        {% for msg in messages %}
+                            <li class="list-group-item">
+                                <strong>{{ msg.client.name }}:</strong> "{{ msg.message }}"<br>
+                                <small class="text-muted">⏰ Agendado para: {{ msg.schedule_time }}</small>
+                            </li>
+                        {% else %}
+                            <li class="list-group-item text-muted text-center">Nenhuma mensagem agendada.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript para Filtrar Clientes -->
+<script>
+    document.getElementById('searchClient').addEventListener('input', function () {
+        const searchValue = this.value.toLowerCase();
+        const clientRows = document.querySelectorAll('#clientTable tbody tr');
+
+        clientRows.forEach(row => {
+            const clientName = row.querySelector('.client-name').textContent.toLowerCase();
+            const clientPhone = row.querySelector('.client-phone').textContent.toLowerCase();
+
+            // Verifica se o termo está no nome ou no telefone
+            if (clientName.includes(searchValue) || clientPhone.includes(searchValue)) {
+                row.style.display = ''; // Mostra a linha se corresponder
+            } else {
+                row.style.display = 'none'; // Oculta a linha se não corresponder
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <div class="px-4 py-2 bg-primary text-white rounded shadow-sm">
+        <h1 class="my-0 text-center">
+            <i class="bi bi-person-plus-fill"></i> Adicionar Cliente
+        </h1>
+    </div>
+</div>
+<hr>
+<br>
+
+<div class="row">
+    <!-- Formulário de Adicionar Cliente -->
+    <div class="col-md-12">
+        <form method="POST">
+            <div class="row">
+                <!-- Campo Nome -->
+                <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">👤 Nome</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                        <input type="text" class="form-control" id="name" name="name" required
+                               placeholder="Digite o nome completo"
+                               pattern="^[A-Za-zÀ-ÿ\s]+$" 
+                               title="O nome deve conter apenas letras e espaços.">
+                    </div>
+                </div>
+
+                <!-- Campo Telefone -->
+                <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">📞 Telefone</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                        <input type="text" class="form-control" id="phone" name="phone" required
+                               placeholder="+55XXXXXXXXXXX"
+                               pattern="^\+55\d{11}$" 
+                               title="O telefone deve estar no formato internacional brasileiro: +55 seguido de 11 dígitos.">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-success w-25">
+                    <i class="bi bi-person-plus-fill"></i> Adicionar Cliente
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="row">
+    <!-- Tabela de Clientes -->
+    <div class="col-md-12">
+        <h2 class="text-center">👥 Clientes Cadastrados</h2>
+
+        <!-- Barra de Pesquisa -->
+        <div class="mb-3">
+            <input type="text" id="searchBar" class="form-control" 
+                   placeholder="🔍 Pesquisar por nome ou telefone..." 
+                   onkeyup="filterTable()">
+        </div>
+
+        <!-- Tabela com Scroll Lock -->
+        <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; padding: 10px;">
+            <table class="table table-striped table-hover table-bordered" id="clientTable">
+                <thead>
+                    <tr>
+                        <th>👤 Nome</th>
+                        <th>📞 Telefone</th>
+                        <th>⚙️ Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for client in clients %}
+                    <tr>
+                        <td>{{ client.name }}</td>
+                        <td>{{ client.phone }}</td>
+                        <td>
+                            <!-- Botão Editar -->
+                            <a href="{{ url_for('edit_client', client_id=client.id) }}" 
+                               class="btn btn-sm btn-warning me-1" 
+                               title="Editar">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            
+                            <!-- Botão Excluir -->
+                            <form action="{{ url_for('delete_client', client_id=client.id) }}" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-danger" 
+                                        onclick="return confirm('Tem certeza que deseja excluir este cliente?')" 
+                                        title="Excluir">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para filtrar os resultados na tabela
+    function filterTable() {
+        const searchValue = document.getElementById("searchBar").value.toLowerCase();
+        const rows = document.querySelectorAll("#clientTable tbody tr");
+
+        rows.forEach(row => {
+            const name = row.cells[0].textContent.toLowerCase();
+            const phone = row.cells[1].textContent.toLowerCase();
+            row.style.display = name.includes(searchValue) || phone.includes(searchValue) ? "" : "none";
+        });
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="my-4 text-center">Editar Cliente</h1>
+
+<form method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ client.name }}" required
+               placeholder="Digite o nome completo"
+               pattern="^[A-Za-zÀ-ÿ\s]+$"
+               title="O nome deve conter apenas letras e espaços.">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="phone" name="phone" value="{{ client.phone }}" required
+               placeholder="+55XXXXXXXXXXX"
+               pattern="^\+55\d{11}$"
+               title="O telefone deve estar no formato internacional brasileiro: +55 seguido de 11 dígitos.">
+    </div>
+    <button type="submit" class="btn btn-primary">Atualizar Cliente</button>
+    <a href="{{ url_for('add_client') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
