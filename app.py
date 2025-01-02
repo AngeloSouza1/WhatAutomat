@@ -1,4 +1,3 @@
-from pyvirtualdisplay import Display
 from flask import Flask, render_template, redirect, url_for, request, flash
 from models import db, Client, ScheduledMessage
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -9,6 +8,8 @@ import time
 from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
 from services.message_service import send_message, send_bulk_messages
+from pyvirtualdisplay import Display
+import pyautogui
 
 # Configuração do Flask
 app = Flask(__name__)
@@ -84,7 +85,9 @@ def edit_client(client_id):
         if not name or not phone:
             flash("Todos os campos são obrigatórios!", "danger")
             return redirect(url_for('add_client'))
-
+, methods=['GET', 'POST'])
+def send_messages():
+    if r
         # Validação do telefone
         if not phone.startswith('+55') or len(phone) != 14 or not phone[1:].isdigit():
             flash("O telefone deve estar no formato internacional brasileiro (+55 seguido de 11 dígitos).", "danger")
